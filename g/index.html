@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Games</title>
+  <style>
+    /* Global reset and body styling */
+    body {
+      margin: 0;
+      padding: 0;
+      background-color: #111;
+      font-family: Arial, sans-serif;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px;
+    }
+
+    /* Header styling */
+    header {
+      position: fixed;
+      top: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 600px;
+      background-color: #181818;
+      padding: 10px 0;
+      border-radius: 9999px;
+      z-index: 1000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    nav a {
+      font-size: 20px;
+      color: white;
+      text-decoration: none;
+      transition: opacity 0.2s;
+    }
+
+    nav a:hover {
+      opacity: 0.8;
+    }
+
+    /* Games grid styling */
+    .games-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+      gap: 35px;
+      width: 90%;
+      max-width: 600px;
+      margin-top: 20px;
+      justify-content: start;
+      padding: 0;
+    }
+
+    .game-item {
+      width: 100px;
+      height: 100px;
+      background-color: #181818;
+      border-radius: 18px;
+      overflow: hidden;
+      transition: transform 0.2s;
+      cursor: pointer;
+    }
+
+    .game-item:hover {
+      transform: scale(1.05);
+    }
+
+    .game-item img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* Desktop styling */
+    @media (min-width: 768px) {
+      header {
+        width: 80%;
+        max-width: 800px;
+        top: 30px;
+        padding: 15px 0;
+      }
+      
+      nav a {
+        font-size: 32px;
+      }
+      
+      body {
+        padding-top: 120px;
+      }
+      
+      .games-container {
+        max-width: 800px;
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body> 
+  <header>
+    <nav>
+      <a href="../index.html">home</a>
+      <a href="index.html">games</a>
+      <a href="..s/index.html">settings</a>
+    </nav>
+  </header>
+
+  <div class="games-container">
+    <a class="game-item" href="javascript:void(0);" onclick="handleGameSuggestion()">
+        <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396462036385882/Untitled99_20250329001801.png?ex=67e8c6d2&is=67e77552&hm=cd93f1e2f6e7240187000e12c9ba03d0717143d9e3040af5a11c7255644f9e26&" alt="suggest game">
+    </a>
+    <a class="game-item" href="roblox.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396462346768536/IMG_1069.png?ex=67e8c6d2&is=67e77552&hm=79b38b26fdb262eb4e103683d445500256a83b8505df504a84594f1ba9f54fed&" alt="roblox">
+    </a>
+    <a class="game-item" href="minecraft.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396462653210666/IMG_1070.png?ex=67e8c6d2&is=67e77552&hm=183f2e1cc14bc1b024f1ec99ce31fe3f48274f902823667ae9e7fb1b6074f5c8&" alt="minecraft">
+    </a>
+    <a class="game-item" href="fnaf1.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396463915434074/IMG_1071.png?ex=67e8c6d3&is=67e77553&hm=2451cc6cfb9363aad63a3a095af1c91de1573468d5d8057c60e03a03fa5e6aa7&" alt="fnaf 1">
+    </a>
+    <a class="game-item" href="fnaf2.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396462921515028/IMG_1072.png?ex=67e8c6d2&is=67e77552&hm=594024aa76b912e11489a80284103b0fec12eee5baa68f3b7f290c955889d26a&" alt="fnaf 2">
+    </a>
+    <a class="game-item" href="fnaf3.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396463256932403/IMG_1073.webp?ex=67e8c6d2&is=67e77552&hm=7b2572e6abbe80cc0dccf20fe5d8c0ac7e9fb82088d7d0e5985a3ef9727509bc&" alt="fnaf 3">
+    </a>
+    <a class="game-item" href="fnaf4.html">
+      <img src="https://cdn.discordapp.com/attachments/1335092005402841120/1355396463630483627/IMG_1074.webp?ex=67e8c6d2&is=67e77552&hm=ee4ac4786ba744a926d6db11b29aa31bb71e338ef5386d71354ef18c216437a7&" alt="fnaf 4">
+    </a>
+  </div>
+
+  <script>
+    async function handleGameSuggestion() {
+      try {
+        // Replace with your webhook components
+        const webhookParts = [
+          'https://discord.com/api/webhooks/',
+          '1355410819508076745',
+          '/',
+          'olHpAduwltGODB9eDSSLfYGWgdooQvPmQsbBtci7a-NnXsO0CNiApsP8-6HeH_ZVJnM_'
+        ];
+
+       
+    const suggestion = prompt('suggest a game to add:');
+    if (!suggestion) return;
+
+    // Block @everyone and @here mentions
+    const blacklist = ["@everyone", "@here"];
+    const containsBlacklist = blacklist.some(word => 
+      suggestion.toLowerCase().includes(word)
+    );
+
+    if (containsBlacklist) {
+      alert('boi u not pinging everyone 😭🙏');
+      return;
+    }
+
+    const response = await fetch(webhookParts.join(''), {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        content: `new suggestion: ${suggestion}`
+      })
+    });
+
+    if (!response.ok) throw new Error('Failed to send');
+    alert('will be reviewd by asnd');
+  } catch (error) {
+    console.error('Error:', error);
+    alert('error');
+  }
+    }
+  </script>
+</body>
+</html>
